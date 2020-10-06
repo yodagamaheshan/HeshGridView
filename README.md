@@ -1,3 +1,3 @@
 # HeshGridView
 
-A description of this package.
+This package provide simple grid view
