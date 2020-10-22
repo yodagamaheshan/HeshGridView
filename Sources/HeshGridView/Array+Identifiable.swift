@@ -10,7 +10,7 @@ import Foundation
 @available(iOS 13, *)
 extension Array where Element: Identifiable {
     
-    func firstIndex(matching: Element) -> Int? {
+   public func firstIndex(matching: Element) -> Int? {
         for index in self.indices {
             if self[index].id == matching.id{
                 return index

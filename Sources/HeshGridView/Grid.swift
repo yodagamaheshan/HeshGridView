@@ -9,16 +9,16 @@
 import SwiftUI
 
 @available(iOS 13, *)
-struct Grid<Item ,ItemView>: View where Item: Identifiable, ItemView: View {
+public struct Grid<Item ,ItemView>: View where Item: Identifiable, ItemView: View {
     private var items: [Item]
     private var itemView: (Item) -> ItemView
     
-    init(_ item: [Item], itemView: @escaping (Item) -> ItemView) {
+    public init(_ item: [Item], itemView: @escaping (Item) -> ItemView) {
         self.items = item
         self.itemView = itemView
     }
     
-    var body: some View {
+    public var body: some View {
         GeometryReader { (proxy) in
             body(for: GridLayout(itemCount: items.count, in: proxy.size))
         }
